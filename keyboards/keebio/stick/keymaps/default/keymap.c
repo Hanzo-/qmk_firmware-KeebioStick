@@ -19,10 +19,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [0] = LAYOUT(
-        KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12
+        [0] = LAYOUT(
+        TG(1),    HYPR(KC_F1),    HYPR(KC_F2),    HYPR(KC_F3),    HYPR(KC_F4),    HYPR(KC_F5),    HYPR(KC_F6),    HYPR(KC_F7),    HYPR(KC_F8),    HYPR(KC_F9),   HYPR(KC_F10),   KC_KB_MUTE
+    ),
+
+    [1] = LAYOUT(
+        TG(0),  RGB_MODE_FORWARD,  RGB_MODE_REVERSE,  RGB_HUI,  RGB_HUD,  RGB_SAI,  RGB_SAD,  RGB_VAI,  RGB_VAD,  RGB_SPI,  RGB_SPD,  RGB_TOG
+    ),
+
+    [2] = LAYOUT(
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______
+    ),
+
+    [3] = LAYOUT(
+        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______
     ),
 };
+
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
